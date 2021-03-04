@@ -7,7 +7,6 @@ public class Student {
     private String name;
     private int roll;
     private Optional<List<String>> subjects;
-    private String roomID;
 
     /**
      * checkSubjectsEmpty
@@ -31,11 +30,10 @@ public class Student {
                 '}';
     }
 
-    public Student(String n, int r, Optional<List<String>> subs, String id) {
+    public Student(String n, int r, Optional<List<String>> subs) {
         this.name = n;
         this.roll = r;
         this.subjects = subs;
-        this.roomID = id;
     }
 
     /**
@@ -44,13 +42,5 @@ public class Student {
      */
     public Optional<List<String>> getSubjects() {
         return subjects;
-    }
-
-    /**
-     * getRoomID
-     * @return returns roomID
-     */
-    public String getRoomID() {
-        return roomID;
     }
 }

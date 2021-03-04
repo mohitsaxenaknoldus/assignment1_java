@@ -19,13 +19,12 @@ public class CreateStudents {
         List<String> list = new ArrayList<>(Arrays.asList(subjects));
         Optional<List<String>> subjectList = Optional.of(list);
 
-        String roomID = "xyz";
         final int rollNo = 401;
 
-        Student mohit = new Student("Mohit Saxena", rollNo, subjectList, roomID);
-        Student nitin = new Student("Nitin Kumar Mishra", rollNo, Optional.empty(), roomID);
-        Student kiran = new Student("Kiran Jeet Kaur", rollNo, subjectList, roomID);
-        Student sakshi = new Student("Sakshi Mittal", rollNo, Optional.empty(), roomID);
+        Student mohit = new Student("Mohit Saxena", rollNo, subjectList);
+        Student nitin = new Student("Nitin Kumar Mishra", rollNo, Optional.empty());
+        Student kiran = new Student("Kiran Jeet Kaur", rollNo, subjectList);
+        Student sakshi = new Student("Sakshi Mittal", rollNo, Optional.empty());
 
         List<Student> students = new ArrayList<>();
         students.add(mohit);

@@ -4,9 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class ClassRoom {
+    private final String roomID;
     private final Optional<List<Student>> studentList;
 
-    public ClassRoom(Optional<List<Student>> list) {
+    public ClassRoom(String id, Optional<List<Student>> list) {
+        this.roomID = id;
         this.studentList = list;
     }
 

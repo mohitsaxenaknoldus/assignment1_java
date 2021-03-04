@@ -2,7 +2,6 @@ package com.knoldus.assignment1.Service;
 
 import com.knoldus.assignment1.Entity.ClassRoom;
 import com.knoldus.assignment1.Entity.Student;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,11 +11,10 @@ public class CreateRoom {
      * create
      * @return Instance object
      */
-    public ClassRoom create()
+    public ClassRoom create(String roomID, List<Student> studentList)
     {
-        List<Student> students= new ArrayList<>();
-        Optional<List<Student>> studentList = Optional.of(students);
+        Optional<List<Student>> list = Optional.of(studentList);
 
-        return new ClassRoom(studentList);
+        return new ClassRoom(roomID, list);
     }
 }

@@ -16,7 +16,7 @@ public class StudentTest {
     private List<String> list = new ArrayList<>(Arrays.asList(subjects));
     private Optional<List<String>> subjectList = Optional.of(list);
     private static final int ROLLNO = 401;
-    private Student student = new Student("Mohit Saxena", ROLLNO, subjectList, "xyz");
+    private Student student = new Student("Mohit Saxena", ROLLNO, subjectList);
 
     @Test
     public void checkSubjectsEmpty() {
@@ -26,10 +26,5 @@ public class StudentTest {
     @Test
     public void getSubjects() {
         assert (student.getSubjects().isPresent());
-    }
-
-    @Test
-    public void getRoomID() {
-        assert (student.getRoomID().equals("xyz"));
     }
 }

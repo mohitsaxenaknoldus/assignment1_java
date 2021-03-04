@@ -1,8 +1,7 @@
 package com.knoldus.assignment1.Service;
 
-import com.knoldus.assignment1.Entity.Student;
-import java.util.List;
+import com.knoldus.assignment1.Entity.ClassRoom;
 
 public interface StudentsWithNoSubjects {
-    List<Student> getStudentsWithNoSubjects(List<Student> list);
+    void getStudentsWithNoSubjects(ClassRoom classRoom);
 }

@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/com/knoldus/assignment1/Controller/ClassController.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/com/knoldus/assignment1/Entity/ClassRoom.java">
           <value>
             <Attribute>

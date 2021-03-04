@@ -1,8 +1,7 @@
 package com.knoldus.assignment1.Service;
 
-import com.knoldus.assignment1.Entity.Student;
-import java.util.List;
+import com.knoldus.assignment1.Entity.ClassRoom;
 
 public interface PrintSubjectsOfClass {
-    List<Student> getSubjectsOfClassXYZ(List<Student> list);
+    void getSubjectsOfClassXYZ(ClassRoom classRoom);
 }

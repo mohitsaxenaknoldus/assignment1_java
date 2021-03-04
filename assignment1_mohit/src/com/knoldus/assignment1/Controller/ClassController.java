@@ -16,21 +16,19 @@ public final class ClassController {
         CreateStudents createStudents = new CreateStudents();
         List<Student> students = createStudents.create();
 
-        //Creating room
+        //Creating rooms
         CreateRoom createRoom = new CreateRoom();
-        ClassRoom xyz = createRoom.create();
+        ClassRoom xyz = createRoom.create("xyz", students);
 
         //Printing students with no subjects
         StudentsWithNoSubjectsImpl studentsWithNoSubjects = new StudentsWithNoSubjectsImpl();
-        List<Student> noSubjectStudents = studentsWithNoSubjects.getStudentsWithNoSubjects(students);
         LOGGER.info("Students with no subjects: ");
-        noSubjectStudents.forEach(System.out::println);
+        studentsWithNoSubjects.getStudentsWithNoSubjects(xyz);
 
         //Printing subjects of students with roomID "xyz"
         PrintSubjectsOfClassImpl printSubjectsOfClass = new PrintSubjectsOfClassImpl();
-        List<Student> subjectsOfRoomXYZ = printSubjectsOfClass.getSubjectsOfClassXYZ(students);
         LOGGER.info("Subjects of students of room xyz: ");
-        subjectsOfRoomXYZ.stream().map(Student::getSubjects).forEach(System.out::println);
+        printSubjectsOfClass.getSubjectsOfClassXYZ(xyz);
 
         //Printing "hello Student" if room has students
         RoomWithStudentsImpl roomWithStudents = new RoomWithStudentsImpl();
